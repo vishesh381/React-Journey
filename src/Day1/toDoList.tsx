@@ -37,7 +37,7 @@ export function ToDoList() {
   };
 
   const handleSaveClick = () => {
-    if (editValue.trim() === "") return; // optional: prevent empty tasks
+    if (editValue.trim() === "") return;
     const updatedList = [...listItems];
     if (editIndex !== null) {
       updatedList[editIndex] = editValue;
