@@ -1,12 +1,14 @@
 import './App.css'
 import "./ToDoList.css";
 import CarAPP from './Components/ClassComp/CarAPP';
-import ToDoListFullyFunctionalHW from './Components/ToDoListFullyFunctionalHW';
 import TicTacToe from './Components/TicTacToe';
 import ToDoClass from './Components/ToDoClass/ToDoClass';
+import ParentComp from './Components/PropsDemo/ParentComp';
 // import Profile, { getUserInfo as GetUserInfo, Greeting } from './Day1/day1Practice';
 // import { ToDoList as ToDoList } from './Day1/toDoList';
 // import ToDoList1 from './Day1/ToDoList1';
+import { TodoProvider } from "./context/TodoContext";
+import ToDoListFunctionalWithContext from "./components/ToDoListFunctionalWithContext";
 function App() {
 
   return (
@@ -19,10 +21,14 @@ function App() {
       <Greeting name="John" />
       <Greeting name="Alice" />
       <ToDoList/> */}
-      <CarAPP/>
+      {/* <CarAPP/>
       <ToDoListFullyFunctionalHW/>
       <TicTacToe/>
-      <ToDoClass/>
+      <ToDoClass/> */}
+      {/* <ParentComp/> */}
+      <TodoProvider>
+      <ToDoListFunctionalWithContext />
+    </TodoProvider>
     </div>
   )
 }
