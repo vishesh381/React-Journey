@@ -4,6 +4,9 @@ import CarAPP from './Components/ClassComp/CarAPP';
 import TicTacToe from './Components/TicTacToe';
 import ToDoClass from './Components/ToDoClass/ToDoClass';
 import ParentComp from './Components/PropsDemo/ParentComp';
+import { Provider } from "react-redux";
+import { store } from "./store/store";
+import ToDoListRedux from "./Components/ToDoListRedux";
 // import Profile, { getUserInfo as GetUserInfo, Greeting } from './Day1/day1Practice';
 // import { ToDoList as ToDoList } from './Day1/toDoList';
 // import ToDoList1 from './Day1/ToDoList1';
@@ -26,9 +29,12 @@ function App() {
       <TicTacToe/>
       <ToDoClass/> */}
       {/* <ParentComp/> */}
-      <TodoProvider>
+      {/* <TodoProvider>
       <ToDoListFunctionalWithContext />
-    </TodoProvider>
+    </TodoProvider> */}
+    <Provider store={store}>
+    <ToDoListRedux />
+  </Provider>
     </div>
   )
 }
