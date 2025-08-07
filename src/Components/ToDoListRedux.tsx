@@ -66,7 +66,7 @@ export default function ToDoListRedux() {
                     {item.text}
                     <button onClick={() => {
                     dispatch({ type: "START_EDIT", index: realIndex });
-                    setEditValue(todos[realIndex].text.replace(/^Added at 2025-08-01:\s*/, ""));
+                    setEditValue(todos[realIndex].text.replace(/^Added at \d{4}-\d{2}-\d{2}:\s*/, ""));
                     }}>Edit</button>
                     <button onClick={() => dispatch({ type: "MARK_COMPLETE", index: realIndex })}>Complete</button>
                     <button onClick={() => dispatch({ type: "DELETE_TODO", index: realIndex })}>Delete</button>
