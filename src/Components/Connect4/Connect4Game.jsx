@@ -33,9 +33,7 @@ export default function Connect4Game() {
 const checkWinner = (board, row, col, player) => {
     return (
       checkDirection(board, row, col, player, 0, 1) || // horizontal
-      checkDirection(board, row, col, player, 1, 0) || // vertical
-      checkDirection(board, row, col, player, 1, 1) || // diagonal 
-      checkDirection(board, row, col, player, 1, -1)   // diagonal 
+      checkDirection(board, row, col, player, 1, 0) //vertical
     );
   };
 const checkDirection = (board, row, col, player, rowDir, colDir) => {
