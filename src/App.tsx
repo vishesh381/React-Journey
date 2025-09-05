@@ -1,18 +1,20 @@
 import './App.css'
 import "./ToDoList.css";
-import CarAPP from './Components/ClassComp/CarAPP';
-import TicTacToe from './Components/TicTacToe';
-import ToDoClass from './Components/ToDoClass/ToDoClass';
-import ParentComp from './Components/PropsDemo/ParentComp';
-import { Provider } from "react-redux";
-// import { store } from "./store/store";
-import store from "./store/store";
-import ToDoListRedux from "./Components/ToDoListRedux";
-// import Profile, { getUserInfo as GetUserInfo, Greeting } from './Day1/day1Practice';
-// import { ToDoList as ToDoList } from './Day1/toDoList';
-// import ToDoList1 from './Day1/ToDoList1';
-import { TodoProvider } from "./context/TodoContext";
-import ToDoListFunctionalWithContext from "./components/ToDoListFunctionalWithContext";
+// import CarAPP from './Components/ClassComp/CarAPP';
+// import TicTacToe from './Components/TicTacToe';
+// import ToDoClass from './Components/ToDoClass/ToDoClass';
+// import ParentComp from './Components/PropsDemo/ParentComp';
+// import { Provider } from "react-redux";
+// // import { store } from "./store/store";
+// import store from "./store/store";
+// import ToDoListRedux from "./Components/ToDoListRedux";
+// // import Profile, { getUserInfo as GetUserInfo, Greeting } from './Day1/day1Practice';
+// // import { ToDoList as ToDoList } from './Day1/toDoList';
+// // import ToDoList1 from './Day1/ToDoList1';
+// import { TodoProvider } from "./context/TodoContext";
+// import ToDoListFunctionalWithContext from "./components/ToDoListFunctionalWithContext";
+import Connect4Game from "./Components/Connect4/Connect4Game";
+
 function App() {
 
   return (
@@ -33,9 +35,10 @@ function App() {
       {/* <TodoProvider>
       <ToDoListFunctionalWithContext />
     </TodoProvider> */}
-    <Provider store={store}>
+    {/* <Provider store={store}>
     <ToDoListRedux />
-  </Provider>
+  </Provider> */}
+  <Connect4Game/>
     </div>
   )
 }
